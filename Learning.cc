@@ -111,5 +111,15 @@ int main()
 
     cout << justTest << " " << "has the txt size of: " << justTest.size();
 
+    /*
+
+    You can access the characters in a string by referring to its index number inside square brackets [].
+
+    Note: String indexes start with 0: [0] is the first character. [1] is the second character, etc.
+
+    */
+
+    cout << justTest << " " << "Select the first index: " << justTest[0];
+
     return 0;
 }
