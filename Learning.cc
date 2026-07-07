@@ -68,6 +68,8 @@ int main()
     cout << "He has the height of" << " " << myHeight << "\n\n";
     cout << "Is he alive" << " " << isAlive << " " << "and has the blood type of" << " " << bloodIdentifier << bloodBar << "\n\n";
 
-    cout << "Never Ever Give Up has the txt length of: " << justTest.length();
+    cout << "Never Ever Give Up has the txt length of: " << justTest.length() << "\n\n";
+    cout << "Never Ever Give Up has the txt size of: " << justTest.size();
+
     return 0;
 }
