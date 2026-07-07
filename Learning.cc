@@ -33,7 +33,7 @@ double myHeight = 6.2;
 string myName = "Omid";
 string mylastname = "Teimory";
 
-string fullName = myName + mylastname;
+string fullName = myName + " " + mylastname;
 
 char bloodIdentifier = 'B';
 char bloodBar = '+';
