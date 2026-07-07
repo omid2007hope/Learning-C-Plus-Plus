@@ -59,11 +59,15 @@ cin is pronounced "see-in". Used for input, and uses the extraction operator (>>
 
 */
 
+string justTest = "Never Ever Give Up";
+
 int main()
 {
     cout << "This is" << " " << betterFullName << "\n\n";
     cout << "He is" << " " << myAge << " " << "years old" << "\n\n";
     cout << "He has the height of" << " " << myHeight << "\n\n";
     cout << "Is he alive" << " " << isAlive << " " << "and has the blood type of" << " " << bloodIdentifier << bloodBar << "\n\n";
+
+    cout << "Never Ever Give Up has the txt length of: " << justTest.length();
     return 0;
 }
