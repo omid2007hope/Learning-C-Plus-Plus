@@ -1,12 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-To use strings, you must include an additional header file in the source code, the <string> library:
-*/
-
-#include <string>
-
 /* C++ Variables
 
 int - stores integers (whole numbers), without decimals, such as 123 or -123
@@ -31,6 +25,9 @@ int myAge = 16;
 double myHeight = 6.2;
 string myName = "Omid ";
 string mylastname = "Teimory";
+char bloodIdentifier = 'B';
+char bloodBar = '+';
+bool isAlive = true;
 
 /* +
 
@@ -41,31 +38,7 @@ However, you could also add a space with quotes (" " or ' '):
 
 */
 
-/*
-
-Escape character	Result	                Description
-\'	                '	                    Single quote
-\"	                " 	                    Double quote
-\\	                \	                    Backslash
-
-*/
-
 string fullName = myName + " " + mylastname;
-
-/* Append()
-
-A string in C++ is actually an object,
-which contain functions that can perform certain operations on strings.
-For example, you can also concatenate strings with the append() function:
-
-*/
-
-string betterFullName = myName.append(mylastname);
-
-char bloodIdentifier = 'B';
-char bloodBar = '+';
-
-bool isAlive = true;
 
 /*
 
@@ -80,7 +53,7 @@ const int myNum = 15; // myNum will always be 15
 int main()
 {
 
-    cout << "This is" << " " << betterFullName << "\n\n";
+    cout << "This is" << " " << fullName << "\n\n";
     cout << "He is" << " " << myAge << " " << "years old" << "\n\n";
     cout << "He has the height of" << " " << myHeight << "\n\n";
     cout << "Is he alive" << " " << isAlive << " " << "and has the blood type of" << " " << bloodIdentifier << bloodBar << "\n\n";
