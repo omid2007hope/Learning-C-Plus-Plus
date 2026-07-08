@@ -114,7 +114,7 @@ int main()
 
     cout << "Type your fullname, firstname + lastname here: " << "\n\n";
     getline(cin, inputFullname);
-    cout << "your fullname is: " << inputFullname;
+    cout << "your fullname is: " << inputFullname << endl;
 
     // ...........................................
     // ...........................................
