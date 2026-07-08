@@ -71,13 +71,13 @@ int main()
 
     */
 
-    cout << (x > 5); // returns 1 (true), because 10 is higher than 5
+    cout << (x > 5) << endl; // returns 1 (true), because 10 is higher than 5
 
     cout << ifGreater << endl;
 
     cout << boolalpha; // enable printing "true"/"false"
 
-    cout << isAboveVotingAge << endl;
+    cout << "Is this person above the voting Age? " << isAboveVotingAge << endl;
 
     return 0;
 };
