@@ -1,17 +1,14 @@
 #include <iostream>
-
-/*
-
-To use strings, you must include an additional header file in the source code, the <string> library:
-
-*/
-
-#include <string>
 using namespace std;
 
 /*
-C-style strings are created with the char type instead of string.yu
+To use strings, you must include an additional header file in the source code, the <string> library:
+*/
 
+#include <string>
+
+/*
+C-style strings are created with the char type instead of string.yu
 As C++ was developed as an extension of C, it continued to support this way of creating strings in C++:
 
 Key Differences
@@ -25,14 +22,12 @@ Safety	            Low (no bounds checking)	        High (bounds checking option
 While std::string is recommended for general C++ programming,
 C-style strings remain necessary for interfacing with legacy C libraries or
 systems requiring strict low-level memory control.
-
 */
 
 string greeting1 = "Hello"; // Regular String
 char greeting2[] = "Hello"; // C-Style String (an array of characters)
 
 /* C++ Variables
-
 int - stores integers (whole numbers), without decimals, such as 123 or -123
 
 double - stores floating point numbers, with decimals, such as 19.99 or -19.99
@@ -42,7 +37,6 @@ char - stores single characters, such as 'a' or 'B'. Char values are surrounded 
 string - stores text, such as "Hello World". String values are surrounded by double quotes
 
 bool - stores values with two states: true or false
-
 */
 
 /* Basic Data Types
@@ -56,9 +50,7 @@ double	8 bytes	Stores fractional numbers, containing one or more decimals. Suffi
 */
 
 int myAge = 16;
-
 double myHeight = 6.2;
-
 string myName = "Omid ";
 string mylastname = "Teimory";
 
