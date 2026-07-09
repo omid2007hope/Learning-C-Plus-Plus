@@ -28,10 +28,44 @@ int main()
 
     int ageEntryByUser = thisYear - birthEntryByUser;
 
+    /*
+
+    There is also a short-hand if...else,
+    known as the ternary operator because it uses three operands.
+
+    The ternary operator returns a value based on a condition: if the condition is true,
+    it returns the first value; otherwise, it returns the second value.
+
+    It can be used to replace multiple lines of code with a single line,
+    and is often used to replace simple if...else statements:
+
+    */
+
     bool verfiy = ageBaseOnID == ageEntryByUser;
     std::string policy = (verfiy) ? "+21\n User is Verified \n\n" : "Age verification failed, please try again \n\n Note: flase age entry";
 
     std::cout << policy << "\n\n";
+
+    /*
+    Nested Ternary
+    You can nest ternary operators to handle more than two outcomes, but it can make your code harder to read:
+
+    Example
+    int time = 22;
+    string message = (time < 12) ? "Good morning."
+    : (time < 18) ? "Good afternoon."
+    : "Good evening.";
+    cout << message;
+
+    */
+
+    /*
+
+    && (AND) - all conditions must be true
+    || (OR) - at least one condition must be true
+    ! (NOT) - reverses a condition (true → false, false → true)
+
+    */
 
     bool adult = 21 <= ageEntryByUser && 40 >= ageEntryByUser;
     bool old = 40 <= ageEntryByUser && 80 >= ageEntryByUser;
