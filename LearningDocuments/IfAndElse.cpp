@@ -2,8 +2,6 @@
 #include <cmath>
 #include <string>
 
-using namespace std;
-
 /*
 
 Use if to specify a block of code to be executed, if a condition is true
@@ -19,7 +17,7 @@ int main()
     const int legalAgeInUS = 21;
     const int thisYear = 2026;
 
-    const int birthYearInID = 2007;
+    const int birthYearInID = 1980;
 
     int birthEntryByUser;
 
@@ -27,10 +25,11 @@ int main()
     std::cin >> birthEntryByUser;
 
     int ageBaseOnID = thisYear - birthYearInID;
+
     int ageEntryByUser = thisYear - birthEntryByUser;
 
     bool verfiy = ageBaseOnID == ageEntryByUser;
-    bool policy = (verfiy) ? "+21\n User is Verified \n\n" : "Age verification failed, please try again \n\n Note: flase age entry";
+    std::string policy = (verfiy) ? "+21\n User is Verified \n\n" : "Age verification failed, please try again \n\n Note: flase age entry";
 
     std::cout << policy << "\n\n";
 
