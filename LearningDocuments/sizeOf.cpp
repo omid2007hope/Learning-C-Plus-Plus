@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int num[] = {10, 20, 30};
+int num[3] = {10, 20, 30};
 
 int main()
 {
@@ -17,5 +17,11 @@ int main()
 
     std::cout << sizeof(num);
 
+    /*
+    ! To find out how many elements an array has, you have to divide the size of the array by the size of the first element in the array:
+    */
+
+    int getArrayLength = sizeof(num) / sizeof(num[0]);
+    std::cout << getArrayLength;
     return 0;
 };
