@@ -3,8 +3,28 @@
 
 int num[3] = {10, 20, 30};
 
-int main()
+int age[] = {18, 25, 32, 40, 30, 19, 37, 50};
+
+// Count
+int length = sizeof(age) / sizeof(age[0]);
+
+double sum, avgAge = 0;
+
+main()
 {
+
+    std::cout << "Age array length: " << length << std::endl;
+
+    for (int eachAge : age)
+    {
+        // In total
+        // ! sum = 0  | sum = sum + eachAge
+        sum += eachAge;
+    };
+
+    avgAge = sum / length;
+
+    std::cout << "Avergae Age: " << avgAge << std::endl;
 
     // To get the size of an array, you can use the sizeof() operator:
 
