@@ -1,7 +1,6 @@
-
 # Aether — your own networked database engine
 
-For a *totally new* project that hits Velora's scale and boldness, consider building **Aether**: a from-scratch, persistent, multi-client database engine written in C++ with its own on-disk format, small query language, network wire protocol, and a web dashboard. Think "a mini PostgreSQL/Redis you built yourself." 
+For a _totally new_ project that hits Velora's scale and boldness, consider building **Aether**: a from-scratch, persistent, multi-client database engine written in C++ with its own on-disk format, small query language, network wire protocol, and a web dashboard. Think "a mini PostgreSQL/Redis you built yourself."
 
 ## Why this project
 
@@ -111,63 +110,3 @@ Keep `core/` free of networking dependencies — engine as a testable library an
 Relative difficulty (low → high): **V1 → V2 → Final polish → V3**. V3 (B-tree + parser) is the hardest and deserves the most time. Do not start a version until the previous one is committed and runs end-to-end.
 
 If you want, tell me your weekly hours and current C++ comfort and I will turn these phases into a milestone checklist with concrete first tasks for V1.
-
-Got the idea. You want a **"speak your mind" voice companion**: you talk freely, it transcribes, cleans up the mess (removes filler/wrong stuff, fixes grammar, kills duplicates), then *intelligently sorts* what you said — tasks go to a to-do list, everything else becomes notes/summary — and it acts as a proactive assistant (reminders, roadmap building, suggestions, clarifying things). Here's the full plan.
-
-## The project: **"Echo" — a speak-your-mind voice companion**
-
-You hold a button (or just talk), dump whatever is in your head out loud, and Echo turns raw rambling into **structured, cleaned, actionable output**:
-
-```
-Your voice → transcription (STT) → cleanup (grammar, filler, dedupe)
-→ intent classification (task? note? reminder? idea?)
-→ routing (tasks → to-do, ideas → notes, dates → reminders)
-→ summary + it can talk back to you (TTS)
-```
-
-The "smart" part is the middle: it's not just a transcriber, it's a **thinking layer** that understands what you meant and organizes it for you.
-
-One honest note up front, same as last time: **I won't give you calendar estimates (weeks/months)** — they'd be fiction, since it depends entirely on your weekly hours, how much of the AI layer you build vs. call an API, and how stuck you get. Instead I'll give you **ordered versions with clear "done when" definitions and relative difficulty**, so you can attach your own timeline. [7-cite-0](#7-cite-0) 
-
----
-
-## Tech decisions (decide these before V1)
-
-- **This is a web/full-stack project, not a C++ one.** It plays to your Velora strengths. If you *want* it to double as C++ practice, only one piece is a real C++ candidate (see the stretch note at the end) — don't force the whole thing into C++, it fights the tooling.
-- **STT (speech → text):** start with the browser's built-in `Web Speech API` (free, zero setup). Upgrade later to `Whisper` (OpenAI API, or `whisper.cpp` locally) for accuracy.
-- **TTS (text → speech):** start with the browser `SpeechSynthesis` API. Upgrade to a neural TTS API later for a nicer voice.
-- **The "smart" cleanup + classification layer:** an LLM API call. This is the brain — grammar fix, dedupe, and "is this a task or a note?" are all one well-designed prompt at first.
-- **Stack:** Next.js frontend + Express/Mongoose backend — exactly the shape you already proved in Velora, so you're not learning the plumbing, only the new AI/audio parts. [7-cite-1](#7-cite-1) 
-
----
-
-## Guiding principle: every version works end-to-end
-
-Your known risk is scope creep (the radar repo has broken/unfinished pieces). [7-cite-2](#7-cite-2)  So each version below is a **usable product**, not a half-layer.
-
----
-
-## V1 — "It hears me and cleans it up"
-
-**Goal:** You talk, it transcribes, and it gives you back clean text.
-
-**Features**
-- Push-to-talk button in the browser, live transcription via `Web Speech API`.
-- Send the raw transcript to your backend → one LLM call that: fixes grammar, removes filler words ("um", "like", "you know"), and removes duplicate/repeated points.
-- Show raw vs. cleaned side by side.
-- Save each session (raw + cleaned) to MongoDB.
-
-**Done when:** you ramble for 30 seconds, and the screen shows a clean, grammatical, de-duplicated version of what you said.
-
-**Difficulty:** easy — it's Velora's stack + one API call.
-
----
-
-# Projects index
-
-This workspace contains two separate project READMEs. Open the one you want to view:
-
-- [Aether — networked database engine](README_Aether.md)
-- [Echo — speak-your-mind voice companion](README_Echo.md)
-
-If you want, I can rename these files to `README.md` within separate folders, or add a small CONTRIBUTING section. Which would you prefer?
