@@ -15,19 +15,19 @@ int main()
     switch (thisVar)
     {
     case 25:
-        /* code */
+        std::cout << "difficulty: Easy";
         break;
 
     case 50:
-
         std::cout << "difficulty: Normal";
-
         break;
+
     case 75:
-        /* code */
+        std::cout << "difficulty: Hard";
         break;
 
     default:
+        std::cout << "difficulty: Undifined";
         break;
     }
 
